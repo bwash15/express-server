@@ -1,0 +1,32 @@
+{
+  "name": "express-server",
+  "version": "1.0.0",
+  "description": "server_for_applications_sandbox",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bwash15/applications-sandbox.git"
+  },
+  "author": "BWash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bwash15/applications-sandbox/issues"
+  },
+  "homepage": "https://github.com/bwash15/applications-sandbox#readme",
+  "dependencies": {
+    "axios": "^1.2.0",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.7.4"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20"
+  }
+}
