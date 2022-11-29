@@ -1,5 +1,10 @@
 const { config } = require( "dotenv" );
 
+
+// load user session info > thier IP address, any other info
+// Simply design it in the object below return statement 
+
+
 module.exports = () => {
     const env = config( { path: `./${process.env.NODE_ENV || 'development'}.env`, } );
 
@@ -15,6 +20,9 @@ module.exports = () => {
             db_name: env.parsed.DATABASE_NAME,
             user: env.parsed.DATABASE_USER,
             db_key: env.parsed.DATABASE_PWD,
+        },
+        session: {
+
         }
     };
 };
