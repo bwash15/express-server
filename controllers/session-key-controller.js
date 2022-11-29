@@ -4,7 +4,7 @@ const { generateApiKey } = require( 'generate-api-key' );
 const sessions = new Map();
 
 //--------------------------------------------------------------------
-const api_key_request = ( req, res ) => {
+const session_key_request = ( req, res ) => {
     const sessionId = req.body.sessionId;
     if ( !sessionId ) return res.status( 500 ).json( { error: `${sessionId} is required` } );
     if ( sessions.has( sessionId ) ) return res.status( 500 ).json( { error: `${sessionId} already exists with api-key` } );
@@ -13,8 +13,8 @@ const api_key_request = ( req, res ) => {
     sessions.set( sessionId, api_key );
     return res.json( {
         sessionId: sessionId,
-        api_key: api_key
+        apikey: api_key
     } )
 }
 
-module.exports = { api_key_request };
+module.exports = { session_key_request };
